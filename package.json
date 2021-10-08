@@ -1,0 +1,15 @@
+{
+  "name": "dinject",
+  "version": "1.0.0",
+  "description": "Custom Script Injector for the Discord Desktop Client.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "angelsflyinhell",
+  "license": "ISC",
+  "dependencies": {
+    "find-up": "^6.2.0"
+  }
+}
