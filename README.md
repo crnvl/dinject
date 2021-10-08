@@ -6,5 +6,5 @@ First of all, this wouldn't have been possible without the amazing [gist](https:
 The whole concept + a few scripts directly base on their work, so please check them out, if you want to learn more.
 
 # Build it yourself
-With Node.js installed, you can just use clone the repo and use `npm install` in the project directory.
+With Node.js installed, you can just clone the repo and use `npm install` in the project directory.
 To run the Injector, use `node app.js`.
