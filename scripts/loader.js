@@ -29,6 +29,8 @@ window.XMLHttpRequest.prototype.open = function() {
 
 let proxied2 = window.XMLHttpRequest.prototype.setRequestHeader;
 window.XMLHttpRequest.prototype.setRequestHeader = function() {
+    editUsername()
+
     if(insideChannelRequest && !authTokenObtained && arguments[0] === "Authorization"){
         authToken = arguments[1];
         authTokenObtained = true;
@@ -42,19 +44,20 @@ window.XMLHttpRequest.prototype.setRequestHeader = function() {
     return proxied2.apply(this, [].slice.call(arguments));
 };
 
-// We can now define a sendMessage function that behaves exactly like discord:
-function sendMessage(msg,channel){
-    if(!authTokenObtained){
-        console.log("Unable to send message without authToken.");
-        console.log("Try typing something in a chat to obtain the token.");
-    }
-    channel_url = `https://discordapp.com/api/v9/channels/${channel}/messages`;
+alert('dinject script loader has been injected successfully!\nfor more info, visit https://github.com/angelsflyinhell/disject')
+// function loadCSS() {
+//     const file = location.pathname.split( "/" ).pop();
+//
+//     const link = document.createElement( "link" );
+//     link.href = "Y:\\Downloads\\theme.css";
+//     link.type = "text/css";
+//     link.rel = "stylesheet";
+//     link.media = "screen,print";
+//
+//     document.getElementsByTagName( "head" )[0].appendChild( link );
+// }
+// loadCSS()
 
-    request = new XMLHttpRequest();
-    request.withCredentials = true;
-    request.open("POST", channel_url);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.setRequestHeader("Authorization", authToken);
-    request.setRequestHeader("X-Super-Properties", xsuperToken);
-    request.send(JSON.stringify({ content: msg, tts: false }));
+function editUsername() {
+    document.getElementsByClassName('size14-e6ZScH title-eS5yk3').item(0).textContent = 'Dinject'
 }

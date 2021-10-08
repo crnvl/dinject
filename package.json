@@ -10,6 +10,7 @@
   "author": "angelsflyinhell",
   "license": "ISC",
   "dependencies": {
-    "find-up": "^6.2.0"
+    "find-up": "^6.2.0",
+    "ps-node": "^0.1.6"
   }
 }
